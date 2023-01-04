@@ -1,24 +1,24 @@
 #include <iostream>
-#include <string>
 using namespace std;
 int main()
 {
-    string output;
-    for(int i=1; i<=100; i++){
-        output="";
-        if(i%3 == 0) {
-            output+="Foo";
+    char p = 0;
+    for(int i=1; i<=100; i++)
+    {
+        p = 0;
+        if(!(i%3)) {
+            cout << "Foo";
+            p = 1;
         }
-        if(i%5 == 0) {
-            output+="Baa";
+        if(!(i%5)) {
+            cout << "Baa";
+            p = 1;
         }
-    if (output!=""){
-        cout << output;
-    }else{
-        cout << i;
-    }
+        if(!p)
+        {
+            cout << i;
+        }
     cout << endl;
     }
-
     return 0;
 }
